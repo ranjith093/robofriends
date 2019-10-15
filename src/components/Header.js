@@ -3,6 +3,9 @@ import React, { Component } from 'react';
 
 class Header extends Component {
     shouldComponentUpdate(nextProps, nextState) {
+        if(this.props !== nextProps){
+            return true;
+        }
         return false;
     }
     render() {
